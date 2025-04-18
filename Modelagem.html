@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Modelagem.css">
+    <link rel="icon" href="imagens/Teste.png">
+    <title>Modelagem</title>
+</head>
+<body>
+    
+    <div class="barra-superior">
+        <nav>
+            <h2 class="Titulo-portfolio">Portfólio</h2>
+            <ul class="Separacao-botoes">
+                <li>
+                    <div class="Home">
+                        <button class="btnTelaPrincipal" id="BoteosAcima">Tela principal</button>  
+                    </div>
+                </li>
+                <li>
+                    <div class="Materias">
+                        <button class="btnMaterias" id="BoteosAcima">Matérias</button>
+                        <ul class="lista-materias">
+                            <li id="HumanasBotao">Humanas</li>
+                            <li id="LinguagensBotao">Linguagens</li>
+                            <li id="MatematicaBotao">Matemática</li>
+                            <li id="NaturezaBotao">Natureza</li>
+                            <li id="TiBotao">TI</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="BannerMatematica">
+        <img src="imagens/BannerModelagem.gif" alt="">
+        <div class="MathSobreBanner">Modelagem de Sistemas</div>
+    </div>
+
+    <div class="AtividadesPropostasMath">
+        <div class="tittleAtividades">
+            <h1>1° Trimestre</h1>
+        </div>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Hambúrgueria - Planilhas</h1>
+                <h3>Nesta atividade realizada no dia 26 de fevereiro, tendo como prazo máximo até o dia 27 do mesmo mês, feita individualmente, tinha como objetivo utilizarmos os conhecimentos sobre Requisitos funcionais, não funcionais e Regras de negócios aprendidos em sala de aula. A atividade foi realizada no google planilhas, onde tínhamos que fazer uma planilha sobre uma hambúrgueria tematizada, sendo a minha a Burguer do Jão, a planilha é dividida em 5 colunas, sendo ID, Título, Descrição, Classificação e prioridade. </h3> <br> <h3>Habilidades: H4, H7, H8</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvModelagem1.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://docs.google.com/spreadsheets/d/1Ji0hq_8AcP-ZS1X3q3v2zP81tQkw_pEd4QuXV7FTyFM/edit?usp=sharing"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>SA - Fluxity</h1>
+                <h3>A primeira parte da atividade da SA foi sendo realizada durante os períodos de aulas, ao longo de várias semanas de estudos. A atividade da SA foi feita em grupo, sendo no meu caso eu, Fabricio, Luís, Jordan, Gabriel Trevisan e Miguel. Onde nessa primeira parte tínhamos que fazer um documento no google docs, entregue pelo nosso líder, Jordan Aguiar, onde colocamos nossa logo, fontes, paleta de cor, resumo sobre nosso site/empresa, dores no mercado e como o site e app funcionam. Depois tivemos que fazer uma apresentação no canva, apresentando cada uma dessas informações além de como funcionaria nosso protótipo do arduíno.</h3> <br> <h3>H1, H2, H3, H4, H6, H7</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvModelagem2.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGiLSTVwi0/2ESBCpAfx_wuvlB4wQok9g/edit?utm_content=DAGiLSTVwi0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>2° Trimestre</h1>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>3° Trimestre</h1>
+        </div>
+
+    <div>
+
+    <footer>
+        <div>
+            <h1 class="TextoFooter">Contatos</h1>
+            <div class="social"> 
+                <ul id="footer_list">
+                    <li>
+                        <a href="https://github.com/JoaoPedroB08" target="_blank" class="link-contato">
+                            <img src="imagens/GitLogo.png" alt="GitHub">
+                            <h3>GitHub</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link-contato" id="emailBotao">
+                            <img src="imagens/MailLogo.png" alt="Email">
+                            <h3>E-mail</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div id="emailTexto" style="color: white; font-size: 14px; margin-top: 10px; display: none;">
+                    jbroccadossantos@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("emailBotao").addEventListener("click", function(event) {
+            event.preventDefault(); // impede redirecionamento
+            const emailTexto = document.getElementById("emailTexto");
+            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

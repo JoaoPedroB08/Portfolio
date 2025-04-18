@@ -1,0 +1,322 @@
+*{
+    font-family: 'Oswald', sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #12141d;
+    animation: gradiente 1s ease infinite;
+    overflow-x: hidden;
+}
+
+.barra-superior nav{
+    display: flex;
+    width: 100%;
+    height: 8%; 
+    padding: 1% 2%; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12141d;
+    box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.barra-superior nav:hover{
+    opacity: 1;
+}
+
+.Titulo-portfolio{
+    font-size: 1.5em; 
+    margin: 0;
+    color: white;
+}
+
+.Separacao-botoes{
+    display: flex;
+    gap: 3%;
+    list-style: none;
+}
+
+.Separacao-botoes li{
+    display: flex;
+}
+
+.Separacao-botoes button{
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+}
+
+.Separacao-botoes button:hover{
+    text-decoration: underline;
+}
+
+.Materias{
+    position: relative;
+}
+
+.lista-materias{
+    display: none;
+    position: absolute;
+    top: 30px; 
+    right: 0;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.3);
+}
+
+.lista-materias li{
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.lista-materias li:hover{
+    background-color: #555;
+}
+
+.Materias:hover .lista-materias{
+    display: block;
+}
+
+.gifTelaPrincipal {
+    width: 100%; 
+    height: 450px;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 500;
+}
+
+.gifTelaPrincipal img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.PortfolioSobreGif{
+    position: absolute;
+    justify-content: center;
+    font-size: 100px;
+    font-style: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    z-index: 1000;
+}
+
+.gifTelaPrincipal .TextoSobrepondoGif { 
+    position: absolute;
+    justify-content: center;
+    top: 30%;
+    font-size: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+/*---------------------------------------{Dividindo}-----------------------------------------*/
+
+.titleSobreMim{
+    color: white;
+    margin: auto;
+    text-align: center;
+    justify-content: justify;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: solid black 2px;
+    border-top: solid black 2px;
+    background-color: #151722;
+}
+
+.alinhamentoSobreMim{
+    display: flex;
+}
+
+.txtSobreMim1{
+    padding: 2%;
+    width: 75%;
+    padding-left: 40%;
+    font-size: 16px;
+    color: rgb(194, 194, 194);
+}
+
+.imgMinha{
+    position: relative;
+    margin-top: -16%;
+    left: 20%;
+    padding: 2%;
+}
+
+.imgMinhaSobre{
+    width: 14% !important;
+    height: 13% !important;
+}
+
+.AlinhamentoCurriculoTxt{
+    display: flex;
+    padding-bottom: 3%;
+}
+
+.txtSobreMim2{
+    padding: 5%;
+    width: 60.5%;
+    padding-left: 22%;
+    font-size: 16px;
+    color: rgb(194, 194, 194);
+}
+
+.TittleCurriculo{
+    padding-bottom: 2%;
+    color: white;
+}
+
+.ImgCurriculo img{
+    padding-bottom: 2%;
+    padding-top: 15%;
+    width: 40%; 
+    height: auto; 
+    object-fit: cover;
+    display: flex;
+}
+
+.ImgCurriculo button{
+    width: 40%;
+    height: 10%;
+    background-color: #ffac13;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: x-large;
+}
+
+.ImgCurriculo button:hover{
+    background-color: #e0850d;
+    
+}
+
+/*---------------------------------------{Dividindo}-----------------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 6, 12);
+    height: 240px;
+}
+
+.TextoFooter {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#footer_list {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    padding: 0;
+    margin-top: 10px;
+}
+
+#footer_list li {
+    display: flex;
+}
+
+#footer_list li h3 {
+    margin: 0; 
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.link-contato {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+.link-contato:hover {
+    color: #ffac13;
+    text-decoration: underline;
+}
+
+.link-contato img {
+    width: 24px; 
+    height: 24px; 
+}
+
+/*---------------------------------------{Dividindo}-----------------------------------------*/
+
+.PPE {
+    color: white;
+    font-size: large;
+    text-align: center;
+    padding: 5%;
+
+}
+
+.AlinhamentoPortfolios {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 5%;
+    background-color: #12141d;
+}
+
+.ImgPortfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* define uma largura padrão para manter os botões alinhados */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.ImgPortfolio img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.ImgPortfolio .botaoPortfolio button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffac13;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.ImgPortfolio .botaoPortfolio button:hover {
+    background-color: #e89c10;
+}

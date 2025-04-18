@@ -1,0 +1,259 @@
+/*------------------------{Cabeçalho}-----------------------*/
+
+*{
+    font-family: 'Oswald', sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #12141d;
+    animation: gradiente 1s ease infinite;
+    overflow-x: hidden;
+}
+
+.barra-superior nav{
+    display: flex;
+    width: 100%;
+    height: 8%; 
+    padding: 1% 2%; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12141d;
+    box-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.barra-superior nav:hover{
+    opacity: 1;
+}
+
+.Titulo-portfolio{
+    font-size: 1.5em; 
+    margin: 0;
+    color: white;
+}
+
+.Separacao-botoes{
+    display: flex;
+    gap: 3%;
+    list-style: none;
+}
+
+.Separacao-botoes li{
+    display: flex;
+}
+
+.Separacao-botoes button{
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+}
+
+.Separacao-botoes button:hover{
+    text-decoration: underline;
+}
+
+.Materias{
+    position: relative;
+}
+
+.lista-materias{
+    display: none;
+    position: absolute;
+    top: 30px; 
+    right: 0;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.3);
+}
+
+.lista-materias li{
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.lista-materias li:hover{
+    background-color: #555;
+}
+
+.Materias:hover .lista-materias{
+    display: block;
+}
+
+/*------------------------{Contéudo Novo}-----------------------*/
+
+.BannerMatematica {
+    width: 100%; 
+    height: 600px;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 500;
+}
+
+.BannerMatematica img{
+    width: 100%;
+}
+
+.MathSobreBanner{
+    position: absolute;
+    justify-content: center;
+    font-size: 100px;
+    font-style: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+/*------------------------{Atividades}-----------------------*/
+
+.tittleAtividades {
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #151722;
+    border-bottom: solid black 2px;
+}
+
+.AlinhamentoGeralAtvs {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.AlinhamentoGeralAtvs {
+    display: flex;
+}
+
+.ImgBotaoAtv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imgAtv1Math {
+    display: flex;
+    justify-content: center;
+}
+
+.imgAtv1Math img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+}
+
+.btnTrimestres {
+    width: 60%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ffac13;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btnTrimestres:hover {
+    background-color: #e89c10;
+}
+
+.lista-trimestre {
+    display: none;
+    list-style: none;
+    padding: 10px;
+    background-color: #151722;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.lista-trimestre li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.lista-trimestre li:hover {
+    background-color: #ffac13;
+    color: black;
+}
+/*--------------------------{footer}-------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 6, 12);
+    height: 240px;
+}
+
+.TextoFooter {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#footer_list {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    padding: 0;
+    margin-top: 10px;
+}
+
+#footer_list li {
+    display: flex;
+}
+
+#footer_list li h3 {
+    margin: 0; 
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.link-contato {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+.link-contato:hover {
+    color: #ffac13;
+    text-decoration: underline;
+}
+
+.link-contato img {
+    width: 24px; 
+    height: 24px; 
+}

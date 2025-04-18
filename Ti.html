@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ti.css">
+    <link rel="icon" href="imagens/Teste.png">
+    <title>Tecnologia da info</title>
+</head>
+<body>
+    
+    <div class="barra-superior">
+        <nav>
+            <h2 class="Titulo-portfolio">Portfólio</h2>
+            <ul class="Separacao-botoes">
+                <li>
+                    <div class="Home">
+                        <button class="btnTelaPrincipal" id="BoteosAcima">Tela principal</button>  
+                    </div>
+                </li>
+                <li>
+                    <div class="Materias">
+                        <button class="btnMaterias" id="BoteosAcima">Matérias</button>
+                        <ul class="lista-materias">
+                            <li id="HumanasBotao">Humanas</li>
+                            <li id="LinguagensBotao">Linguagens</li>
+                            <li id="MatematicaBotao">Matemática</li>
+                            <li id="NaturezaBotao">Natureza</li>
+                            <li id="TiBotao">TI</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="BannerMatematica">
+        <img src="imagens/BannerTi.gif" alt="">
+        <div class="MathSobreBanner">Tecnologia da Informação</div>
+    </div>
+
+    <div class="alinhamentodebotoes">
+        <div class="AtividadesPropostasMath">
+            <div class="tittleAtividades">
+                <h1>Escolha sua matéria</h1>
+            </div>
+            <div class="AlinhamentoGeralAtvs">
+                <div class="AlinhamentoAtividadeMath">
+                    <div class="ImgBotaoAtv1">
+                        <div class="imgAtv1Math">
+                            <img src="imagens/1.png" class="imgAtividade1" alt="">
+                        </div>
+                        <button class="btnTrimestres" id="botoesTriModelagem">Modelagem de sistemas</button>
+                    </div>
+                </div>
+        
+                <div class="AlinhamentoAtividadeMath">
+                    <div class="ImgBotaoAtv1">
+                        <div class="imgAtv1Math">
+                            <img src="imagens/2.png" class="imgAtividade1" alt="">
+                        </div>
+                        <button class="btnTrimestres" id="botoesTriIot">IoT</button>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    
+
+
+    <footer>
+        <div>
+            <h1 class="TextoFooter">Contatos</h1>
+            <div class="social"> 
+                <ul id="footer_list">
+                    <li>
+                        <a href="https://github.com/JoaoPedroB08" target="_blank" class="link-contato">
+                            <img src="imagens/GitLogo.png" alt="GitHub">
+                            <h3>GitHub</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link-contato" id="emailBotao">
+                            <img src="imagens/MailLogo.png" alt="Email">
+                            <h3>E-mail</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div id="emailTexto" style="color: white; font-size: 14px; margin-top: 10px; display: none;">
+                    jbroccadossantos@gmail.com
+                </div>
+            </div>
+        </div>
+
+        
+    </footer>
+
+    <script>
+        document.getElementById("emailBotao").addEventListener("click", function(event) {
+            event.preventDefault(); // impede redirecionamento
+            const emailTexto = document.getElementById("emailTexto");
+            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

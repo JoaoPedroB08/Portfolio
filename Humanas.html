@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Humanas.css">
+    <link rel="icon" href="imagens/Teste.png">
+    <title>Humanas</title>
+</head>
+<body>
+    
+    <div class="barra-superior">
+        <nav>
+            <h2 class="Titulo-portfolio">Portfólio</h2>
+            <ul class="Separacao-botoes">
+                <li>
+                    <div class="Home">
+                        <button class="btnTelaPrincipal" id="BoteosAcima">Tela principal</button>  
+                    </div>
+                </li>
+                <li>
+                    <div class="Materias">
+                        <button class="btnMaterias" id="BoteosAcima">Matérias</button>
+                        <ul class="lista-materias">
+                            <li id="HumanasBotao">Humanas</li>
+                            <li id="LinguagensBotao">Linguagens</li>
+                            <li id="MatematicaBotao">Matemática</li>
+                            <li id="NaturezaBotao">Natureza</li>
+                            <li id="TiBotao">TI</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="BannerMatematica">
+        <img src="imagens/BannerHumanas.gif" alt="">
+        <div class="MathSobreBanner">Humanas</div>
+    </div>
+
+    <div class="AtividadesPropostasMath">
+        <div class="tittleAtividades">
+            <h1>1° Trimestre</h1>
+        </div>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Geopolítica - Suriname</h1>
+                <h3>Atividade realizada no dia 10 de fevereiro, tinha como objetivo dividirmos em grupos de até dois estudantes, onde cada dupla iria escolher e pesquisar sobre um país de sua preferência, seguindo como base o modelo apresentado pelo professor. Onde teria informações desde: nome, gentílico, capital, cidade mais populosa, moeda, sobre a independência, PIB, Blocos econômicos que faz parte entre outras informações relevantes sobre o país. No final, uma aula interativa seria feita, onde cada dupla apresentaria sobre seu país, e descutiríamos sobre as diferentes realidades.
+                </h3> <br> <h3>Habilidades: C2, H8, H10 e H12</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvHumanas1.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGe_O-stGY/CnjxpO89qq2XZI9tflqiDQ/edit?utm_content=DAGe_O-stGY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>O Século da Humilhação Chinesa - Rebelião Boxers</h1>
+                <h3>Atividade realizada no dia 14 de abril, feita em dupla, mas com a máxima de 4 participantes por equipe, tinha como conceito compreender os principais eventos que marcaram o chamado "Século da Humilhação" na China, organizando sobre um tópico, entre os que nos foram dados pelo professor, 6 eventos de um acontecimento importante, sendo nossa escolha a Rebelião dos Boxers, separando esses eventos em linha cronológica como uma linha do tempo.</h3> <br> <h3>Habilidades: Não foram disponibilizadas</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvHumanas2.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGk16N-8sE/59sze8XBea6svn-1rDVapg/edit?utm_content=DAGk16N-8sE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>2° Trimestre</h1>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>3° Trimestre</h1>
+        </div>
+
+    <div>
+
+    <footer>
+        <div>
+            <h1 class="TextoFooter">Contatos</h1>
+            <div class="social"> 
+                <ul id="footer_list">
+                    <li>
+                        <a href="https://github.com/JoaoPedroB08" target="_blank" class="link-contato">
+                            <img src="imagens/GitLogo.png" alt="GitHub">
+                            <h3>GitHub</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link-contato" id="emailBotao">
+                            <img src="imagens/MailLogo.png" alt="Email">
+                            <h3>E-mail</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div id="emailTexto" style="color: white; font-size: 14px; margin-top: 10px; display: none;">
+                    jbroccadossantos@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("emailBotao").addEventListener("click", function(event) {
+            event.preventDefault(); // impede redirecionamento
+            const emailTexto = document.getElementById("emailTexto");
+            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

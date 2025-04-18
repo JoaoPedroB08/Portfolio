@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Matematica.css">
+    <link rel="icon" href="imagens/Teste.png">
+    <title>Matemática</title>
+</head>
+<body>
+    
+    <div class="barra-superior">
+        <nav>
+            <h2 class="Titulo-portfolio">Portfólio</h2>
+            <ul class="Separacao-botoes">
+                <li>
+                    <div class="Home">
+                        <button class="btnTelaPrincipal" id="BoteosAcima">Tela principal</button>  
+                    </div>
+                </li>
+                <li>
+                    <div class="Materias">
+                        <button class="btnMaterias" id="BoteosAcima">Matérias</button>
+                        <ul class="lista-materias">
+                            <li id="HumanasBotao">Humanas</li>
+                            <li id="LinguagensBotao">Linguagens</li>
+                            <li id="MatematicaBotao">Matemática</li>
+                            <li id="NaturezaBotao">Natureza</li>
+                            <li id="TiBotao">TI</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="BannerMatematica">
+        <img src="imagens/GifdoJapa.gif" alt="">
+        <div class="MathSobreBanner">Matemática</div>
+    </div>
+
+    <div class="AtividadesPropostasMath">
+        <div class="tittleAtividades">
+            <h1>1° Trimestre</h1>
+        </div>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Quebrando a banca</h1>
+                <h3>Atividade avaliativa realizada no dia 18 de março até dia 21, sendo individual, tinha como o objetivo vermos um filme no auditório, chamado: "Quebrando a banca" ou "21", e respondermos os questionamentos feitos pelo professor em um docs separado, desde a mensagem do filme até em que assunto de matemático ele fazia referência. Após isso, usando da nossa imaginação, deveríamos criar uma história do zero como se fossemos roteiristas de Hollywood, citando conceitos matemáticos e como seria essa nossa produção. A atividade realizada por mim foi: Jota - E o mapa do tesouro, um filme de animação que contaria sobre esse favelado que passaria por dificuldades junto dos seus amigos após encontrar um mapa do tesouro e Creusa, a fuxiqueira da cidade descobrir. </h3> <br> <h3>Habilidades: C5, H31 e H32</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvMatematica1.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://docs.google.com/document/d/1kdYhuJL2XxFIrWhWS0mH6GSkruADrygdcK1F2Ms8_7E/edit?usp=sharing"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Criando a banca (jogo) - ArranjaMais</h1>
+                <h3>Atividade feita em trio, iniciada no dia 8 de abril, tinha como objetivo principal criar um jogo do zero, fisicamente, usando pelo menos um conceito matemático aprendido em sala de aula. Nossa ideia foi o ArranjaMais, um jogo de cartas onde, em cada partida, o mestre escolheria 3 cartas entre 10, e os jogadores teriam que fazer palpites para acertar a sequência correta decidida pelo mestre. Durante as rodadas, poderiam ser usados poderes e até mesmo apostas para facilitar a descoberta da sequência correta, e quem chegasse mais próximo ganharia. Tendo como princípio da probabilidade o fato de que 3 cartas de sequência aleatória entre 10 cartas de 1 a 10 teriam 720 possibilidades diferentes de sequências.</h3> <br> <h3>Habilidades: C5, H30 e H31</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvMatematica2.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGkv3heqs8/CQZVwKrsuw7UkYsCuxIFVQ/edit?utm_content=DAGkv3heqs8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>2° Trimestre</h1>
+        </div>
+
+        <div class="tittleAtividades">
+            <h1>3° Trimestre</h1>
+        </div>
+
+    <div>
+
+    <footer>
+        <div>
+            <h1 class="TextoFooter">Contatos</h1>
+            <div class="social"> 
+                <ul id="footer_list">
+                    <li>
+                        <a href="https://github.com/JoaoPedroB08" target="_blank" class="link-contato">
+                            <img src="imagens/GitLogo.png" alt="GitHub">
+                            <h3>GitHub</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link-contato" id="emailBotao">
+                            <img src="imagens/MailLogo.png" alt="Email">
+                            <h3>E-mail</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div id="emailTexto" style="color: white; font-size: 14px; margin-top: 10px; display: none;">
+                    jbroccadossantos@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("emailBotao").addEventListener("click", function(event) {
+            event.preventDefault(); // impede redirecionamento
+            const emailTexto = document.getElementById("emailTexto");
+            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
