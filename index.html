@@ -16,12 +16,12 @@
             <ul class="Separacao-botoes">
                 <li>
                     <div class="Home">
-                        <button class="btnTelaPrincipal" id="BoteosAcima">Tela principal</button>  
+                        <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Início</button>  
                     </div>
                 </li>
                 <li>
                     <div class="Materias">
-                        <button class="btnMaterias" id="BoteosAcima">Matérias</button>
+                        <button class="btnMaterias nav-button" id="BoteosAcima">Matérias</button>
                         <ul class="lista-materias">
                             <li id="HumanasBotao">Humanas</li>
                             <li id="LinguagensBotao">Linguagens</li>
@@ -31,6 +31,15 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                </li>
+                 <li>
+                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
+                </li>
+                 <li>
+                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
+                 </li>
             </ul>
         </nav>
     </div>
@@ -39,13 +48,27 @@
         <img src="imagens/GifDoDino.gif" alt="">
         <div class="PortfolioSobreGif">PORTFÓLIO</div>
         <div class="TextoSobrepondoGif">de: João Pedro Brocca dos Santos, 3-A</div>
+        <button id="BotaoAbrirModalGame" class="IconePlayBotao">
+            <img src="imagens/BotaoPlay.png" alt="">
+        </button>
+        <div id="ModalGame" class="modalDino">
+            <div class="oqTemNoModal">
+                <span class="fecharModal">X</span>
+                <h2>Jogo do Dino do Google</h2>
+                <p>Pressione Espaço para começar e pular.</p>
+                <div class="TheGame">
+                    <iframe id="frameJogoDino" src="" frameborder="0" scrolling="no" width="600" height="250"></iframe>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <div class="scroll-animado">
-        <div class="titleSobreMim">
+        <div class="titleSobreMim fade-in-section">
             <h1>Sobre mim</h1>
         </div>
-        <div class="AlinhamentoSobreMim">
+        <div class="AlinhamentoSobreMim fade-in-section">
             <div class="txtSobreMim1">
                 <h3>Nascido no dia 2 de março de 2008, em Florianópolis, João Pedro Brocca dos Santos, é estudante do ensino médio, atualmente está cursando o técnico no Senai, já tendo estudado na escola pública municipal, Maria Conceição Nunes. 
                     Sempre teve uma facilidade maior em exatas, mas percebendo que com o tempo não se encaixava, junto de sua irmã, buscou um caminho voltado para as Artes e seus estilos. Seguiu desenhando e treinando até os dias atuais, onde desenvolveu um novo interesse na área da computação e suas tecnologias. Agora tendo em mente, seguir em uma carreira que possua ambos interesses, sendo esta Design gráfico.
@@ -53,11 +76,11 @@
             </div>
         
             <div class="imgMinha">
-                <img src="imagens/ImgMinhaCara.jpg" class="imgMinhaSobre" alt="">
+                <img src="imagens/MinhaFoto.png" class="imgMinhaSobre" alt="">
             </div>
         </div>
     
-        <div class="AlinhamentoCurriculoTxt">
+        <div class="AlinhamentoCurriculoTxt fade-in-section">
     
             <div class="txtSobreMim2">
                 <h1 class="TittleCurriculo">Currículo</h1>
@@ -73,11 +96,11 @@
                 
         </div>
 
-        <div class="titleSobreMim">
+        <div class="titleSobreMim fade-in-section" id="portfolios-antigos">
             <h1>Portfólios anteriores</h1>
         </div>
 
-        <div class="AlinhamentoPortfolios">
+        <div class="AlinhamentoPortfolios fade-in-section">
     
             <div class="ImgPortfolio">
                 <img src="imagens/ImgPortfolio2023.png" alt="Porfólio">
@@ -95,10 +118,10 @@
                 
         </div>
 
-        <div class="titleSobreMim">
+        <div class="titleSobreMim fade-in-section" id="certificados">
             <h1>Certificados e atividades extras</h1>
         </div>
-        <div class="AlinhamentoPortfolios">
+        <div class="AlinhamentoPortfolios fade-in-section">
     
             <div class="ImgPortfolio">
                 <img src="imagens/ImgCertificadoAprenda.png" alt="Porfólio">
@@ -123,10 +146,10 @@
                 
         </div>
 
-        <div class="titleSobreMim">
+        <div class="titleSobreMim fade-in-section" id="ppe-section">
             <h1>PPE</h1>
         </div>
-        <div class="PPE">Área vazia...</div>
+        <div class="PPE fade-in-section">Área vazia...</div>
 
     </div>
     

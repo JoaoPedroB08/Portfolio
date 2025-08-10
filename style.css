@@ -1,6 +1,7 @@
 *{
     font-family: 'Oswald', sans-serif, Arial;
     margin: 0;
+    font-weight: 100;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,11 +12,11 @@ body{
     overflow-x: hidden;
 }
 
+
 .barra-superior nav{
     display: flex;
     width: 100%;
-    height: 8%; 
-    padding: 1% 2%; 
+    padding: 10px 4%;
     align-items: center;
     justify-content: space-between;
     background-color: #12141d;
@@ -32,98 +33,326 @@ body{
 }
 
 .Titulo-portfolio{
-    font-size: 1.5em; 
+    font-size: 1.8em;
     margin: 0;
     color: white;
+    font-weight: 700;
 }
 
 .Separacao-botoes{
     display: flex;
-    gap: 3%;
+    gap: 30px;
     list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0; 
 }
 
 .Separacao-botoes li{
     display: flex;
+    align-items: center;
 }
 
-.Separacao-botoes button{
+.nav-button { 
     background: none;
     border: none;
     color: rgb(255, 255, 255);
-    font-size: 1em;
+    font-size: 1.1em;
+    font-weight: 400;
     cursor: pointer;
-    padding: 0;
+    padding: 10px 5px; 
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    overflow: hidden; 
 }
 
-.Separacao-botoes button:hover{
-    text-decoration: underline;
+
+.nav-button:hover{
+    color: #ffac13; 
+    text-decoration: none; 
+}
+
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; 
+    right: 0; 
+    width: 0;
+    height: 2px; 
+    background-color: #ffac13; 
+    transition: width 0.3s ease-in-out; 
+}
+
+.nav-button:hover::after {
+    width: 100%; 
+    left: 0;
+    right: auto;
 }
 
 .Materias{
     position: relative;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
 }
 
 .lista-materias{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+
     position: absolute;
-    top: 30px; 
+    top: calc(100% - 15px);
     right: 0;
-    background-color: #333;
+    background-color: #282a36;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 0;
     list-style: none;
-    box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.4);
+    z-index: 1200;
+    min-width: 160px;
+
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0.3s;
 }
+
 
 .lista-materias li{
     color: white;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 1em;
+    white-space: nowrap;
+
+    opacity: 0;
+    transform: translateY(-5px); 
+
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .lista-materias li:hover{
-    background-color: #555;
+    background-color: #44475a;
+    color: #ffac13;
+}
+
+.Materias:hover .lista-materias li {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }
 
 .Materias:hover .lista-materias{
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0s;
+}
+
+.Materias:hover .lista-materias li:nth-child(1) {
+    transition-delay: 0.05s;
+}
+.Materias:hover .lista-materias li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.Materias:hover .lista-materias li:nth-child(3) {
+    transition-delay: 0.15s;
+}
+.Materias:hover .lista-materias li:nth-child(4) {
+    transition-delay: 0.2s;
+}
+.Materias:hover .lista-materias li:nth-child(5) {
+    transition-delay: 0.25s;
 }
 
 .gifTelaPrincipal {
-    width: 100%; 
-    height: 450px;
+    width: 100%;
+    height: 500px; 
     overflow: hidden; 
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    z-index: 500;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    background-color: #12141d; 
 }
 
 .gifTelaPrincipal img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover;
-    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.4; 
+    transition: opacity 0.4s ease-in-out; 
+    z-index: 1; 
+}
+
+.gifTelaPrincipal::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.0) 70%);
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out; 
+    z-index: 2; 
+    pointer-events: none; 
 }
 
 .PortfolioSobreGif{
     position: absolute;
-    justify-content: center;
-    font-size: 100px;
-    font-style: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(40px);
+    font-size: clamp(40px, 8vw, 100px); 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    z-index: 1000;
+    z-index: 3; 
+    opacity: 0; 
+    transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s; 
+    text-align: center;
+    pointer-events: none;
 }
+
 
 .gifTelaPrincipal .TextoSobrepondoGif { 
     position: absolute;
-    justify-content: center;
-    top: 30%;
-    font-size: 20px;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%) translateY(40px); 
+    font-size: clamp(16px, 2vw, 22px); 
     color: white;
-    z-index: 1000;
+    z-index: 3; 
+    opacity: 0; 
+    transition: opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s;
+    text-align: center;
+    pointer-events: none;
+}
+
+.gifTelaPrincipal:hover::after {
+    opacity: 1; 
+}
+
+.gifTelaPrincipal:hover .PortfolioSobreGif {
+    opacity: 1; 
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+.gifTelaPrincipal:hover .TextoSobrepondoGif {
+    opacity: 1; 
+    transform: translate(-50%, -50%) translateY(0); 
+}
+
+.IconePlayBotao {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 49%;
+    top: 70%;
+    transform: translate(-30%, -30%) translateY(40px);
+    width: 3rem;
+    opacity: 0;
+    z-index: 4;
+    transition: opacity 0.4s ease-out 0.3s, transform 0.4s ease-out 0.3s;
+    pointer-events: none;   
+}
+
+.IconePlayBotao img {
+    opacity: 0.5;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.IconePlayBotao:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.IconePlayBotao:hover::after{
+    opacity: 1;
+}
+
+.gifTelaPrincipal:hover .IconePlayBotao {
+    opacity: 1;
+    transform: translate(-30%, -30%) translateY(0);
+    pointer-events: auto;
+}
+
+/* --------------------------------------{The Game}------------------------------------------ */
+
+.modalDino {
+    position: fixed;
+    display: none;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 35, 46, 0.7); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.modalDinoAbrido {
+    display: flex;
+}
+
+.oqTemNoModal {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 2rem 3rem;
+    border: 0.5px solid rgb(218, 218, 218);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    animation: aparecer 0.4s ease-out;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.fecharModal {
+    color: rgb(253, 253, 253);
+    position: absolute;
+    top: 10rem;
+    right: 15rem;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2 ease;
+}
+
+.fecharModal:hover, .fecharModal:focus {
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+}
+
+.TheGame {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#frameJogoDino {
+    border: 0.5px solid rgb(190, 190, 190);
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
 }
 
 /*---------------------------------------{Dividindo}-----------------------------------------*/
@@ -146,6 +375,7 @@ body{
 
 .txtSobreMim1{
     padding: 2%;
+    margin-top: 2%;
     width: 75%;
     padding-left: 40%;
     font-size: 16px;
@@ -154,14 +384,26 @@ body{
 
 .imgMinha{
     position: relative;
-    margin-top: -16%;
-    left: 20%;
-    padding: 2%;
+    margin-top: -18%;
+    left: 15%;
+    
 }
 
+
 .imgMinhaSobre{
-    width: 14% !important;
+    width: 30% !important;
     height: 13% !important;
+    transform: scale(1);
+    opacity: 0.9;
+    transition: 
+    transform ease-in-out 0.6s,
+    opacity ease-in-out 0.6s
+    ;
+}
+
+.imgMinhaSobre:hover{
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .AlinhamentoCurriculoTxt{
@@ -289,7 +531,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px; /* define uma largura padrão para manter os botões alinhados */
+    width: 300px;
     border-radius: 10px;
     padding: 20px;
 }
@@ -320,3 +562,55 @@ footer {
 .ImgPortfolio .botaoPortfolio button:hover {
     background-color: #e89c10;
 }
+
+/*---------------------------------------{Dividindo}-----------------------------------------*/
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  html.js-loading .fade-in-section {
+    opacity: 0;
+  }
+
+  #emailTexto {
+    color: white;
+    font-size: 14px; 
+    margin-top: 10px;
+  
+    opacity: 0;               
+    transform: translateY(-10px);
+    max-height: 0;             
+    overflow: hidden;          
+    visibility: hidden;        
+  
+    transition: opacity 0.3s ease-out,
+                transform 0.3s ease-out,
+                max-height 0.4s ease-out,
+                margin-top 0.3s ease-out, 
+                visibility 0s linear 0.4s;
+  }
+  
+  #emailTexto.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 50px;
+    visibility: visible;
+    transition: opacity 0.3s ease-out,
+                transform 0.3s ease-out,
+                max-height 0.4s ease-out,
+                margin-top 0.3s ease-out,
+                visibility 0s linear 0s;
+  }
+  
+  #emailTexto[style*="display: none"] {
+      display: block !important;
+  }
