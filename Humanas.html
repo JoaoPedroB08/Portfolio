@@ -28,19 +28,19 @@
                             <li id="LinguagensBotao">Linguagens</li>
                             <li id="MatematicaBotao">Matemática</li>
                             <li id="NaturezaBotao">Natureza</li>
-                            <li id="TiBotao">TI</li>
+                            <li id="TiBotao" class="tem-submenu">
+                                TI <span class="seta-submenu">v</span>
+                                <ul class="submenu-ti">
+                                    <li id="IotBotao">IoT</li>
+                                    <li id="ModelagemBotao">Modelagem</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                   <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Voltar</button>
                 </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
-                </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
-                 </li>
             </ul>
         </nav>
     </div>
@@ -50,15 +50,18 @@
         <div class="MathSobreBanner">Humanas</div>
     </div>
 
-    <div class="AtividadesPropostasMath">
-        <div class="tittleAtividades">
-            <h1>1° Trimestre</h1>
-        </div>
+    <div class="trimestre-menu">
+        <span class="trimestre-btn ativo" data-target="trimestre1">1° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre2">2° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre3">3° Trimestre</span>
+    </div>
+
+    <div id="trimestre1" class="conteudo-trimestre">
         <div class="AlinhamentoAtividadeMath">
             <div class="Atv1Math">
                 <h1>Geopolítica - Suriname</h1>
                 <h3>Atividade realizada no dia 10 de fevereiro, tinha como objetivo dividirmos em grupos de até dois estudantes, onde cada dupla iria escolher e pesquisar sobre um país de sua preferência, seguindo como base o modelo apresentado pelo professor. Onde teria informações desde: nome, gentílico, capital, cidade mais populosa, moeda, sobre a independência, PIB, Blocos econômicos que faz parte entre outras informações relevantes sobre o país. No final, uma aula interativa seria feita, onde cada dupla apresentaria sobre seu país, e descutiríamos sobre as diferentes realidades.
-                </h3> <br> <h3>Habilidades: C2, H8, H10 e H12</h3>
+                </h3> <br> <h3>Habilidades: <br> C2: Compreender a importância do trabalho na constituição das sociedades e na formação  dos sujeitos. <br> H8: Analisar as relações entre os agentes envolvidos no mundo do trabalho.<br> H10: Compreender as transformações no mundo do trabalho, geradas por mudanças na ordem econômica.<br> H12: Propor ações sustentáveis e eficientes visando a melhoria dos processos produtivos.</h3>
             </div>
             
             <div class="ImgBotaoAtv1">
@@ -86,16 +89,63 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>2° Trimestre</h1>
+    <div id="trimestre2" class="conteudo-trimestre" style="display: none;">
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Totalitarismo e Segunda Guerra Mundial </h1>
+                <h3>Atividade realizada no dia 14 de abril, feita em dupla, mas com a máxima de 4 participantes por equipe, tinha como conceito compreender os principais eventos que marcaram o chamado "Século da Humilhação" na China, organizando sobre um tópico, entre os que nos foram dados pelo professor, 6 eventos de um acontecimento importante, sendo nossa escolha a Rebelião dos Boxers, separando esses eventos em linha cronológica como uma linha do tempo.</h3> <br> <h3>Habilidades: <br> C5: Aplicar os fundamentos da cidadania, favorecendo uma atuação consciente do indivíduo  na sociedade. <br> C6: Avaliar a sociedade como um sistema complexo, estruturado sob os aspectos políticos,  econômicos, sociais e geoambientais. <br> H30: Analisar as lutas sociais e conquistas obtidas no que se refere às mudanças nas legislações ou nas políticas  públicas. <br> H36: Propor interpretações e soluções para problemas identificados no contexto social brasileiro. <br> H39: Relacionar o papel das instituições sociais às soluções para problemas políticos, econômicos, sociais e  ambientais no contexto da sociedade brasileira. <br> H40:Analisar o processo de formação das instituições sociais e políticas, compreendendo seu papel na sociedade.</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeHumanas2_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGsHOxDRV8/n7iNwgJeviwc3vIfwn345A/edit?utm_content=DAGsHOxDRV8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-        <div class="tittleAtividades">
-            <h1>3° Trimestre</h1>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Holocausto - Instagram </h1>
+                <h3>Atividade realizada no dia 14 de abril, feita em dupla, mas com a máxima de 4 participantes por equipe, tinha como conceito compreender os principais eventos que marcaram o chamado "Século da Humilhação" na China, organizando sobre um tópico, entre os que nos foram dados pelo professor, 6 eventos de um acontecimento importante, sendo nossa escolha a Rebelião dos Boxers, separando esses eventos em linha cronológica como uma linha do tempo.</h3> <br> <h3>Habilidades: <br>C5: Aplicar os fundamentos da cidadania, favorecendo uma atuação consciente do indivíduo  na sociedade.<br>C6: Avaliar a sociedade como um sistema complexo, estruturado sob os aspectos políticos,  econômicos, sociais e geoambientais.<br>H30: Analisar as lutas sociais e conquistas obtidas no que se refere às mudanças nas legislações ou nas políticas  públicas.<br> H40: Analisar o processo de formação das instituições sociais e políticas, compreendendo seu papel na sociedade.</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeHumanas3_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGwDDhrJ94/URrY2xpyx0Txfv6dIkAk7g/edit?utm_content=DAGwDDhrJ94&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-    <div>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>República Oligárquica - Dossiê </h1>
+                <h3>Atividade realizada no dia 14 de abril, feita em dupla, mas com a máxima de 4 participantes por equipe, tinha como conceito compreender os principais eventos que marcaram o chamado "Século da Humilhação" na China, organizando sobre um tópico, entre os que nos foram dados pelo professor, 6 eventos de um acontecimento importante, sendo nossa escolha a Rebelião dos Boxers, separando esses eventos em linha cronológica como uma linha do tempo.</h3> <br> <h3>Habilidades: <br> C2:  Compreender a importância do trabalho na constituição das sociedades e na formação  dos sujeitos. <br> C4:  Interpretar dados e informações referentes aos aspectos políticos, econômicos, sociais e  culturais da sociedade contemporânea. <br> H10: Compreender as transformações no mundo do trabalho, geradas por mudanças na ordem econômica. <br> H22: Analisar, na perspectiva humana e social, as principais características e dinâmicas dos fluxos da sociedade. <br> H26: Comparar pontos de vista e ações práticas do indivíduo ou grupo social em diferentes contextos <br> H27: Analisar hipóteses e questões ambientais, sociais, econômicas, políticas e culturais, a partir de leituras e  debates. </h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeHumanas1_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGpfJ_ldZY/IjsIRlkyBl38aCrW90Mffg/edit?utm_content=DAGpfJ_ldZY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="trimestre3" class="conteudo-trimestre" style="display: none;">
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
 
     <footer>
         <div>
@@ -121,14 +171,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
 
     <script src="script.js"></script>
 

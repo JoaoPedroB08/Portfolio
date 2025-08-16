@@ -28,19 +28,19 @@
                             <li id="LinguagensBotao">Linguagens</li>
                             <li id="MatematicaBotao">Matemática</li>
                             <li id="NaturezaBotao">Natureza</li>
-                            <li id="TiBotao">TI</li>
+                            <li id="TiBotao" class="tem-submenu">
+                                TI <span class="seta-submenu">v</span>
+                                <ul class="submenu-ti">
+                                    <li id="IotBotao">IoT</li>
+                                    <li id="ModelagemBotao">Modelagem</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                   <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Voltar</button>
                 </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
-                </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
-                 </li>
             </ul>
         </nav>
     </div>
@@ -50,10 +50,13 @@
         <div class="MathSobreBanner">Internet das Coisas</div>
     </div>
 
-    <div class="AtividadesPropostasMath">
-        <div class="tittleAtividades">
-            <h1>1° Trimestre</h1>
-        </div>
+    <div class="trimestre-menu">
+        <span class="trimestre-btn ativo" data-target="trimestre1">1° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre2">2° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre3">3° Trimestre</span>
+    </div>
+
+    <div id="trimestre1" class="conteudo-trimestre">
         <div class="AlinhamentoAtividadeMath">
             <div class="Atv1Math">
                 <h1>Atividade 1</h1>
@@ -69,16 +72,20 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>2° Trimestre</h1>
-        </div>
+    <div id="trimestre2" class="conteudo-trimestre" style="display: none;">
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
+    
+    <div id="trimestre3" class="conteudo-trimestre" style="display: none;">
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>3° Trimestre</h1>
-        </div>
-
-    <div>
 
     <footer>
         <div>
@@ -104,14 +111,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
 
     <script src="script.js"></script>
 

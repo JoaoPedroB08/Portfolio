@@ -28,19 +28,19 @@
                             <li id="LinguagensBotao">Linguagens</li>
                             <li id="MatematicaBotao">Matemática</li>
                             <li id="NaturezaBotao">Natureza</li>
-                            <li id="TiBotao">TI</li>
+                            <li id="TiBotao" class="tem-submenu">
+                                TI <span class="seta-submenu">v</span>
+                                <ul class="submenu-ti">
+                                    <li id="IotBotao">IoT</li>
+                                    <li id="ModelagemBotao">Modelagem</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                   <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Voltar</button>
                 </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
-                </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
-                 </li>
             </ul>
         </nav>
     </div>
@@ -50,10 +50,13 @@
         <div class="MathSobreBanner">Natureza</div>
     </div>
 
-    <div class="AtividadesPropostasMath">
-        <div class="tittleAtividades">
-            <h1>1° Trimestre</h1>
-        </div>
+    <div class="trimestre-menu">
+        <span class="trimestre-btn ativo" data-target="trimestre1">1° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre2">2° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre3">3° Trimestre</span>
+    </div>
+
+    <div id="trimestre1" class="conteudo-trimestre">
         <div class="AlinhamentoAtividadeMath">
             <div class="Atv1Math">
                 <h1>Poluição da água</h1>
@@ -117,16 +120,66 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>2° Trimestre</h1>
+    <div id="trimestre2" class="conteudo-trimestre" style="display: none;">
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>SISTEMA IMUNOLÓGICO E VACINAS</h1>
+                <h3>Atividade realizada na data de 24 de fevereiro até dia 28 do mesmo mês, tinha como objetivo compreender as ciências naturais e as tecnologias como construções humanas associadas à cultura dos povos e suas visões de mundo. Nesta apresentação confeccionada por um grupo de 5 integrantes, utilizamos o tema da radiotividade dos resíduos nucleares, onde falamos sobre os conceitos por trás da radiotividade, exemplos, estudos de caso e implicações práticas sobre o tema específico. Sendo uma atividade cansativa graças ao sistema repetido de pesquisa sobre um assunto parcialmente discutido em sala de aula, mesmo com o foco nas apresentações, a dificuldade do entendimento se torna muito maior pela separação dos contéudos.</h3> <br> <h3>Habilidades: C4, H23</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeNatureza1_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGqszdd7zw/iUds5LAV-B3dNn5e8qnqBw/edit?utm_content=DAGqszdd7zw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-        <div class="tittleAtividades">
-            <h1>3° Trimestre</h1>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Glossário Ilustrado de Eletroquímica &  Eletricidade.</h1>
+                <h3>Atividade realizada na data de 24 de fevereiro até dia 28 do mesmo mês, tinha como objetivo compreender as ciências naturais e as tecnologias como construções humanas associadas à cultura dos povos e suas visões de mundo. Nesta apresentação confeccionada por um grupo de 5 integrantes, utilizamos o tema da radiotividade dos resíduos nucleares, onde falamos sobre os conceitos por trás da radiotividade, exemplos, estudos de caso e implicações práticas sobre o tema específico. Sendo uma atividade cansativa graças ao sistema repetido de pesquisa sobre um assunto parcialmente discutido em sala de aula, mesmo com o foco nas apresentações, a dificuldade do entendimento se torna muito maior pela separação dos contéudos.</h3> <br> <h3>Habilidades: C2, H6, H7 e H9</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeNatureza2_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGr1HxhUVg/DBoHNSaCR3LoNU-qvNH_ug/edit?utm_content=DAGr1HxhUVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-    <div>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Campo Magnético Terrestre e Auroras</h1>
+                <h3>Atividade realizada na data de 24 de fevereiro até dia 28 do mesmo mês, tinha como objetivo compreender as ciências naturais e as tecnologias como construções humanas associadas à cultura dos povos e suas visões de mundo. Nesta apresentação confeccionada por um grupo de 5 integrantes, utilizamos o tema da radiotividade dos resíduos nucleares, onde falamos sobre os conceitos por trás da radiotividade, exemplos, estudos de caso e implicações práticas sobre o tema específico. Sendo uma atividade cansativa graças ao sistema repetido de pesquisa sobre um assunto parcialmente discutido em sala de aula, mesmo com o foco nas apresentações, a dificuldade do entendimento se torna muito maior pela separação dos contéudos.</h3> <br> <h3>Habilidades: Não Informadas</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeNatureza3_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://auroracamp.netlify.app"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="trimestre3" class="conteudo-trimestre" style="display: none;">
+
+        <!-- Texto provisório -->
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
+
 
     <footer>
         <div>
@@ -153,15 +206,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
-
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 
 </body>
 </html>

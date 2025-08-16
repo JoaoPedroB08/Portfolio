@@ -28,19 +28,19 @@
                             <li id="LinguagensBotao">Linguagens</li>
                             <li id="MatematicaBotao">Matemática</li>
                             <li id="NaturezaBotao">Natureza</li>
-                            <li id="TiBotao">TI</li>
+                            <li id="TiBotao" class="tem-submenu">
+                                TI <span class="seta-submenu">v</span>
+                                <ul class="submenu-ti">
+                                    <li id="IotBotao">IoT</li>
+                                    <li id="ModelagemBotao">Modelagem</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                   <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Voltar</button>
                 </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
-                </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
-                 </li>
             </ul>
         </nav>
     </div>
@@ -50,10 +50,13 @@
         <div class="MathSobreBanner">Matemática</div>
     </div>
 
-    <div class="AtividadesPropostasMath">
-        <div class="tittleAtividades">
-            <h1>1° Trimestre</h1>
-        </div>
+    <div class="trimestre-menu">
+        <span class="trimestre-btn ativo" data-target="trimestre1">1° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre2">2° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre3">3° Trimestre</span>
+    </div>
+
+    <div id="trimestre1" class="conteudo-trimestre">
         <div class="AlinhamentoAtividadeMath">
             <div class="Atv1Math">
                 <h1>Quebrando a banca</h1>
@@ -85,16 +88,48 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>2° Trimestre</h1>
+    <div id="trimestre2" class="conteudo-trimestre" style="display: none;">
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Pesquisa de Estatística</h1>
+                <h3>Atividade avaliativa realizada no dia 18 de março até dia 21, sendo individual, tinha como o objetivo vermos um filme no auditório, chamado: "Quebrando a banca" ou "21", e respondermos os questionamentos feitos pelo professor em um docs separado, desde a mensagem do filme até em que assunto de matemático ele fazia referência. Após isso, usando da nossa imaginação, deveríamos criar uma história do zero como se fossemos roteiristas de Hollywood, citando conceitos matemáticos e como seria essa nossa produção. A atividade realizada por mim foi: Jota - E o mapa do tesouro, um filme de animação que contaria sobre esse favelado que passaria por dificuldades junto dos seus amigos após encontrar um mapa do tesouro e Creusa, a fuxiqueira da cidade descobrir. </h3> <br> <h3>Habilidades: C4, H27</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeMatematica1_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGr7c7z8mk/kMI4Sv4r_1MgGkN0W8di0A/edit?utm_content=DAGr7c7z8mk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-        <div class="tittleAtividades">
-            <h1>3° Trimestre</h1>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Prova Passe de Matemática</h1>
+                <h3>Atividade avaliativa realizada no dia 18 de março até dia 21, sendo individual, tinha como o objetivo vermos um filme no auditório, chamado: "Quebrando a banca" ou "21", e respondermos os questionamentos feitos pelo professor em um docs separado, desde a mensagem do filme até em que assunto de matemático ele fazia referência. Após isso, usando da nossa imaginação, deveríamos criar uma história do zero como se fossemos roteiristas de Hollywood, citando conceitos matemáticos e como seria essa nossa produção. A atividade realizada por mim foi: Jota - E o mapa do tesouro, um filme de animação que contaria sobre esse favelado que passaria por dificuldades junto dos seus amigos após encontrar um mapa do tesouro e Creusa, a fuxiqueira da cidade descobrir. </h3> <br> <h3>Habilidades: Não disponibilizadas</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeMatematica2_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://exams-sesi-avaliacao-2022.didatti.net.br/aluno-relatorio/70471840152?periodo=15"  class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
+    </div>
+    
+    <div id="trimestre3" class="conteudo-trimestre" style="display: none;">
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
 
-    <div>
 
     <footer>
         <div>
@@ -121,15 +156,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
-
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 
 </body>
 </html>

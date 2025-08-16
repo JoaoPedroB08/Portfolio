@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setupNavigation("LinguagensBotao", "Linguagens.html");
     setupNavigation("MatematicaBotao", "Matematica.html");
     setupNavigation("NaturezaBotao", "Natureza.html");
-    setupNavigation("TiBotao", "Ti.html");
+    setupNavigation("IotBotao", "IoT.html");
+    setupNavigation("ModelagemBotao", "Modelagem.html");
 
 
 //----------------------{animação Scroll}-------------------------
@@ -59,22 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     } else {
         console.warn("Error.");
-    }
-
-
-//------------------------------{Botões TI}--------------------------
-    const modelagemButton = document.getElementById("botoesTriModelagem");
-    if (modelagemButton) {
-        modelagemButton.addEventListener("click", function () {
-            window.location.href = "Modelagem.html";
-        });
-    }
-
-    const iotButton = document.getElementById("botoesTriIot");
-    if (iotButton) {
-        iotButton.addEventListener("click", function () {
-            window.location.href = "IoT.html";
-        });
     }
 
 //------------------------{Ir Para os Lugar certinho}-----------------------
@@ -183,3 +168,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 }); 
+
+// -----------------------{Locomoção entre trimestres e erro no email aparecendo}--------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const emailBotao = document.getElementById("emailBotao");
+    if(emailBotao) {
+        emailBotao.addEventListener("click", function(event) {
+            event.preventDefault();
+            const emailTexto = document.getElementById("emailTexto");
+            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
+        });
+    }
+
+    const trimestreBtns = document.querySelectorAll('.trimestre-btn');
+    const conteudos = document.querySelectorAll('.conteudo-trimestre');
+
+    trimestreBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            trimestreBtns.forEach(b => b.classList.remove('ativo'));
+            this.classList.add('ativo');
+
+            const targetId = this.getAttribute('data-target');
+            
+            conteudos.forEach(conteudo => {
+                conteudo.style.display = 'none';
+            });
+            
+            const targetConteudo = document.getElementById(targetId);
+            if(targetConteudo) {
+                targetConteudo.style.display = 'block';
+            }
+        });
+    });
+});
+
+//-----------------{ LÓGICA DO SUBMENU DE TI }-----------------------------
+const tiBotao = document.getElementById('TiBotao');
+
+    if (tiBotao) {
+        const submenu = tiBotao.querySelector('.submenu-ti');
+        const seta = tiBotao.querySelector('.seta-submenu');
+
+        tiBotao.addEventListener('click', function(event) {
+            event.stopPropagation();
+
+            submenu.classList.toggle('visivel');
+
+            if (submenu.classList.contains('visivel')) {
+                seta.innerHTML = 'ʌ';
+            } else {
+                seta.innerHTML = 'v';
+            }
+        });
+    };

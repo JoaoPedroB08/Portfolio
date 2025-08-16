@@ -28,19 +28,19 @@
                             <li id="LinguagensBotao">Linguagens</li>
                             <li id="MatematicaBotao">Matemática</li>
                             <li id="NaturezaBotao">Natureza</li>
-                            <li id="TiBotao">TI</li>
+                            <li id="TiBotao" class="tem-submenu">
+                                TI <span class="seta-submenu">v</span>
+                                <ul class="submenu-ti">
+                                    <li id="IotBotao">IoT</li>
+                                    <li id="ModelagemBotao">Modelagem</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
+                   <button class="btnTelaPrincipal nav-button" id="BoteosAcima">Voltar</button>
                 </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="certificados">Certificados</button>
-                </li>
-                 <li>
-                    <button class="nav-button" data-scroll-to="ppe-section">PPE</button>
-                 </li>
             </ul>
         </nav>
     </div>
@@ -50,10 +50,13 @@
         <div class="MathSobreBanner">Linguagens</div>
     </div>
 
-    <div class="AtividadesPropostasMath">
-        <div class="tittleAtividades">
-            <h1>1° Trimestre</h1>
-        </div>
+    <div class="trimestre-menu">
+        <span class="trimestre-btn ativo" data-target="trimestre1">1° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre2">2° Trimestre</span>
+        <span class="trimestre-btn" data-target="trimestre3">3° Trimestre</span>
+    </div>
+
+    <div id="trimestre1" class="conteudo-trimestre">
         <div class="AlinhamentoAtividadeMath">
             <div class="Atv1Math">
                 <h1>Nota Redação - 640</h1>
@@ -149,15 +152,64 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="tittleAtividades">
-            <h1>2° Trimestre</h1>
+    <div id="trimestre2" class="conteudo-trimestre" style="display: none;">
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Revista literária</h1>
+                <h3>Está atividade, realizada durante várias semanas mas iniciada no dia 2 de abril, em grupos de 5 estudantes mas que foi permitido pela professora, em sala de aula, até 6 estudantes, é uma avaliação na qual nosso objetivo principal é a confecção de um site, onde o mesmo deveria ter: um nome original, sendo este InfoEnem, uma página com um resumo sobre nosso site, outra sobre os integrantes do grupo, outra sobre direitos humanos, cinema, dados estatísticos, autoridades, literatura e por fim fatos históricos. Cada página deveria ter fontes confiáveis de informação para nos ajudar na realização da redação do Enem. .</h3> <br> <h3>H4 e H24.</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtvLinguagens2.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGkmi_RXBc/MsqAxSJSMBpknUgICpoGsQ/edit?utm_content=DAGkmi_RXBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
 
-        <div class="tittleAtividades">
-            <h1>3° Trimestre</h1>
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Que tipo de arte você consome?</h1>
+                <h3>Está atividade, realizada durante várias semanas mas iniciada no dia 2 de abril, em grupos de 5 estudantes mas que foi permitido pela professora, em sala de aula, até 6 estudantes, é uma avaliação na qual nosso objetivo principal é a confecção de um site, onde o mesmo deveria ter: um nome original, sendo este InfoEnem, uma página com um resumo sobre nosso site, outra sobre os integrantes do grupo, outra sobre direitos humanos, cinema, dados estatísticos, autoridades, literatura e por fim fatos históricos. Cada página deveria ter fontes confiáveis de informação para nos ajudar na realização da redação do Enem. .</h3> <br> <h3>Habilidades: H11 e H25.</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeLinguagens2_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://www.canva.com/design/DAGwNMxBTqQ/tXPbDKPjXYuuJ6frCzgDCA/edit?utm_content=DAGwNMxBTqQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
         </div>
-    <div>
+
+        <div class="AlinhamentoAtividadeMath">
+            <div class="Atv1Math">
+                <h1>Redação Online</h1>
+                <h3>Está atividade, realizada durante várias semanas mas iniciada no dia 2 de abril, em grupos de 5 estudantes mas que foi permitido pela professora, em sala de aula, até 6 estudantes, é uma avaliação na qual nosso objetivo principal é a confecção de um site, onde o mesmo deveria ter: um nome original, sendo este InfoEnem, uma página com um resumo sobre nosso site, outra sobre os integrantes do grupo, outra sobre direitos humanos, cinema, dados estatísticos, autoridades, literatura e por fim fatos históricos. Cada página deveria ter fontes confiáveis de informação para nos ajudar na realização da redação do Enem. .</h3> <br> <h3>Habilidades: Não foram disponibilizadas.</h3>
+            </div>
+            
+            <div class="ImgBotaoAtv1">
+                <div class="imgAtv1Math">
+                    <img src="imagens/AtividadeLinguagens1_2tri.png" class="imgAtividade1" alt="">
+                </div>
+                <a href="https://app.redacaonline.com.br/sesi-sc/aluno/redacao/2366757/abrir" class="botaoAtividade1">
+                    <button>Para ir à Atividade</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="trimestre3" class="conteudo-trimestre" style="display: none;">
+        <h1 style="text-align: center; color: white; padding: 50px;">
+            Ainda não possui atividades...
+        </h1>
+    </div>
+
 
     <footer>
         <div>
@@ -184,15 +236,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
-
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 
 </body>
 </html>

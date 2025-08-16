@@ -355,6 +355,38 @@ body{
 
 }
 
+/*------------------------{ Submenu TI }-----------------------*/
+
+.lista-materias li.tem-submenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.submenu-ti {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+}
+
+.submenu-ti.visivel {
+    display: block;
+}
+
+.submenu-ti li {
+    background-color: #44475a; 
+    padding-left: 30px !important; 
+}
+
+.submenu-ti li:hover {
+    background-color: #ffac13 !important;
+    color: #12141d;
+}
+
 /*---------------------------------------{Dividindo}-----------------------------------------*/
 
 .titleSobreMim{
