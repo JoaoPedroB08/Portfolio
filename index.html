@@ -38,6 +38,9 @@
                     </div>
                 </li>
                 <li>
+                    <button class="nav-button" data-scroll-to="area-profissional">Área Profissional</button>
+                </li>
+                <li>
                     <button class="nav-button" data-scroll-to="portfolios-antigos">Portfólios</button>
                 </li>
                  <li>
@@ -66,48 +69,82 @@
                     <iframe id="frameJogoDino" src="" frameborder="0" scrolling="no" width="600" height="250"></iframe>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="scroll-animado">
-        <div class="titleSobreMim fade-in-section">
-            <h1>Sobre mim</h1>
+    <div class="page-section fade-in-section">
+        <div class="section-title">
+            <h2>Sobre Mim</h2>
         </div>
-        <div class="AlinhamentoSobreMim fade-in-section">
-            <div class="txtSobreMim1">
+        <div class="AlinhamentoSobreMim">
+            <div class="imgMinha">
+                <img src="imagens/MinhaFoto3.png" class="imgMinhaSobre" alt="">
+            </div>
+            <div class="txtSobreMim">
                 <h3>Nascido no dia 2 de março de 2008, em Florianópolis, João Pedro Brocca dos Santos, é estudante do ensino médio, atualmente está cursando o técnico no Senai, já tendo estudado na escola pública municipal, Maria Conceição Nunes. 
                     Sempre teve uma facilidade maior em exatas, mas percebendo que com o tempo não se encaixava, junto de sua irmã, buscou um caminho voltado para as Artes e seus estilos. Seguiu desenhando e treinando até os dias atuais, onde desenvolveu um novo interesse na área da computação e suas tecnologias. Agora tendo em mente, seguir em uma carreira que possua ambos interesses, sendo esta Design gráfico.
                 </h3>
-            </div>
-        
-            <div class="imgMinha">
-                <img src="imagens/MinhaFoto.png" class="imgMinhaSobre" alt="">
+                <div class="botoes-sobre-mim">
+                    <a href="https://github.com/JoaoPedroB08" target="_blank" class="btn-sobre btn-github">
+                        <img src="imagens/GitLogo.png" alt="GitHub Logo">
+                    </a>
+                    <a href="https://docs.google.com/document/d/1MBc1tCx-9AyFpwidgIQj-xA4VtJIHutVTTyM-Z_UUQ8/edit?usp=sharing" target="_blank" class="btn-sobre btn-biografia">Biografia</a>
+                </div>
             </div>
         </div>
+    </div>
     
-        <div class="AlinhamentoCurriculoTxt fade-in-section">
-    
-            <div class="txtSobreMim2">
-                <h1 class="TittleCurriculo">Currículo</h1>
-                <h3>Meu currículo ao lado, representa uma atividade realizada nos anos anteriores, tendo como objetivo divulgar de forma clara conhecimentos e aplicações que já realizei em minha vida técnica, desde os ensinos já completos, certificados e cursos finalizados e conhecimentos em áreas de trabalho que possuo. </h3> <br> <h3>Ao clicar no botão abaixo, estará baixando o meu currículo para obter mais detalhes, desde contatos até especificações dos cursos e ensinos terminados.</h3>
+    <div class="page-section fade-in-section" id="area-profissional">
+        <div class="section-title">
+            <h2>Área Profissional</h2>
+        </div>
+        <div class="area-profissional-wrapper">
+            <div class="area-profissional-main">
+                <div class="profissional-menu">
+                    <span class="profissional-btn active" data-target="tab-sobre">Sobre</span>
+                    <span class="profissional-btn" data-target="tab-atuacao">Atuação</span>
+                    <span class="profissional-btn" data-target="tab-skills">Skills</span>
+                </div>
+                <div class="profissional-conteudo-wrapper">
+                    <div id="tab-sobre" class="profissional-conteudo">
+                        <p>Na minha vida profissional, retive algumas experiências relacionadas, principalmente, a grades e áreas não atreladas aos assuntos em que quero trabalhar, como: Montador, pasteleiro e redes familiares. Mesmo não tendo conexão com o meu objetivo, obtive informações essenciais que serviriam como minhas Soft Skills, como: Trabalho em equipe, aprendizada rápido, comunicação, visão, pontualidade e principalmente gerenciamente de tempo e cronogramas.</p>
+                    </div>
+                    <div id="tab-atuacao" class="profissional-conteudo" style="display: none;">
+                        <p>Área composta por atividades realizadas por mim: <br><br> (Completo): <br> - Ensino Fundamental I e II. <br> - Curso de programação JavaScript e Python. <br> - Curso de audiovisual. <br> - Curso do Capitalismo consciente</p>
+                    </div>
+                    <div id="tab-skills" class="profissional-conteudo" style="display: none;">
+                        <div class="skills-grid">
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL"></div>
+                            <div class="skill-item"><img src="/imagens/CanvaIcon.webp" alt="Canva"></div>
+                            <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-            <div class="ImgCurriculo">
-                <img src="imagens/CurriculoImagemBase.png" alt="Currículo">
-                <a href="imagens/João Pedro Brocca.pdf" download class="botaoCurriculo">
-                    <button>Currículo</button>
+            <div class="area-profissional-imagem">
+                <a href="imagens/João Pedro Brocca.pdf" download>
+                    <img src="imagens/CurriculoImagemBase.png" alt="Currículo">
+                    <div class="imagem-overlay">
+                        <h3 style="font-weight: bold;">Currículo</h3>
+                        <p style="font-size: small;">Clique para mais informações</p>
+                    </div>
                 </a>
             </div>
-                
         </div>
+    </div>
 
-        <div class="titleSobreMim fade-in-section" id="portfolios-antigos">
-            <h1>Portfólios anteriores</h1>
+    <div class="page-section fade-in-section" id="portfolios-antigos">
+        <div class="section-title">
+            <h2>Portfólios anteriores</h2>
         </div>
-
-        <div class="AlinhamentoCards fade-in-section">
-    
+        <div class="AlinhamentoCards">
             <a href="https://www.canva.com/design/DAFc_SLynAg/iJCLZYjdGCUHOOwGzoq59Q/edit?utm_content=DAFc_SLynAg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="card-item">
                 <img src="imagens/portfolioprimeiroano.png" alt="Portfólio de 2023">
                 <div class="card-overlay">
@@ -115,7 +152,6 @@
                     <p>Clique na imagem para mais informações</p>
                 </div>
             </a>
-
             <a href="https://sites.google.com/estudante.sesisenai.org.br/portfoliojp2a/in%C3%ADcio" target="_blank" class="card-item">
                 <img src="imagens/portfoliosegundoano.png" alt="Portfólio de 2024">
                 <div class="card-overlay">
@@ -123,14 +159,14 @@
                     <p>Clique na imagem para mais informações</p>
                 </div>
             </a>
-                
         </div>
+    </div>
 
-        <div class="titleSobreMim fade-in-section" id="certificados">
-            <h1>Certificados e atividades extras</h1>
+    <div class="page-section fade-in-section" id="certificados">
+        <div class="section-title">
+            <h2>Certificados e atividades extras</h2>
         </div>
-        <div class="AlinhamentoCards fade-in-section">
-    
+        <div class="AlinhamentoCards">
             <a href="imagens/Certificado1.pdf" download class="card-item certificado">
                 <img src="imagens/ImgCertificadoAprenda.png" alt="Certificado de Artes Visuais">
                 <div class="card-overlay">
@@ -138,7 +174,6 @@
                     <p>Clique na imagem para mais informações</p>
                 </div>
             </a>
-
             <a href="imagens/CertificadoJavaScript.pdf" download class="card-item certificado">
                 <img src="imagens/ImgCertificadoJs.png" alt="Certificado de JavaScript">
                 <div class="card-overlay">
@@ -146,7 +181,6 @@
                     <p>Clique na imagem para mais informações</p>
                 </div>
             </a>
-
             <a href="imagens/CertificadoPython.pdf" download class="card-item certificado">
                 <img src="imagens/ImgCertificaPY.png" alt="Certificado de Python">
                 <div class="card-overlay">
@@ -154,14 +188,14 @@
                     <p>Clique na imagem para mais informações</p>
                 </div>
             </a>
-                
         </div>
+    </div>
 
-        <div class="titleSobreMim fade-in-section" id="ppe-section">
-            <h1>PPE</h1>
+    <div class="page-section fade-in-section" id="ppe-section">
+        <div class="section-title">
+            <h2>PPE</h2>
         </div>
-        <div class="PPE fade-in-section">Área vazia...</div>
-
+        <div class="PPE">Área vazia...</div>
     </div>
     
     <footer>
@@ -172,13 +206,13 @@
                     <li>
                         <a href="https://github.com/JoaoPedroB08" target="_blank" class="link-contato">
                             <img src="imagens/GitLogo.png" alt="GitHub">
-                            <h3>GitHub</h3>
+                            <h3 style="font-size: 14px;">GitHub</h3>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="link-contato" id="emailBotao">
                             <img src="imagens/MailLogo.png" alt="Email">
-                            <h3>E-mail</h3>
+                            <h3 style="font-size: 14px;">E-mail</h3>
                         </a>
                     </li>
                 </ul>
@@ -188,16 +222,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById("emailBotao").addEventListener("click", function(event) {
-            event.preventDefault(); // impede redirecionamento
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    </script>
-
+    
     <script src="script.js"></script>
 </body>
-
 </html>
