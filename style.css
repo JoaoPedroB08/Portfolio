@@ -407,7 +407,7 @@ body{
 }
 
 .imgMinha {
-    flex: 0 0 40%; /* Imagem ocupa 40% do espaço */
+    flex: 0 0 40%;
     max-width: 400px;
 }
 
@@ -424,11 +424,11 @@ body{
 }
 
 .txtSobreMim {
-    flex: 1; /* Texto ocupa o espaço restante */
+    flex: 1;
 }
 
 .txtSobreMim h3 {
-    font-size: 17px; /* Fonte levemente menor */
+    font-size: 17px;
     color: rgb(211, 211, 211);
     line-height: 1.6;
     margin-bottom: 30px;
@@ -763,4 +763,5 @@ footer {
   
 #emailTexto[style*="display: none"] {
     display: block !important;
+
 }
