@@ -378,8 +378,8 @@ body{
 }
 
 .submenu-ti li {
-    background-color: #44475a; 
-    padding-left: 30px !important; 
+    background-color: transparent; 
+    padding-left: 8px !important; 
 }
 
 .submenu-ti li:hover {
@@ -546,54 +546,84 @@ footer {
     font-size: large;
     text-align: center;
     padding: 5%;
-
 }
 
-.AlinhamentoPortfolios {
+/*--------------------------{NOVO: Cards de Portfólio e Certificados}--------------------------*/
+
+.AlinhamentoCards {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
-    padding: 5%;
+    gap: 40px;
+    padding: 50px 5%;
     background-color: #12141d;
 }
 
-.ImgPortfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    border-radius: 10px;
-    padding: 20px;
+.card-item {
+    position: relative;
+    display: block;
+    max-width: 450px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 3px solid transparent;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+/* CORREÇÃO: Estilo específico para os cards de certificado (verticais) */
+.card-item.certificado {
+    max-width: 320px; /* Largura menor para um formato de retrato */
+    aspect-ratio: 8.5 / 11; /* Proporção de um papel A4, vertical */
+}
 
-.ImgPortfolio img {
+.card-item:hover {
+    transform: scale(1.05);
+    border-color: #ffac13;
+}
+
+.card-item img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: 100%;
     object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
 }
 
-.ImgPortfolio .botaoPortfolio button {
+.card-item:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    padding: 15px;
-    background-color: #ffac13;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 20%, transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
 }
 
-.ImgPortfolio .botaoPortfolio button:hover {
-    background-color: #e89c10;
+.card-item:hover .card-overlay {
+    transform: translateY(0);
 }
+
+.card-overlay h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.card-overlay p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
 
 /*---------------------------------------{Dividindo}-----------------------------------------*/
 

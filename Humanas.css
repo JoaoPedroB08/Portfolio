@@ -12,6 +12,11 @@ body{
     overflow-x: hidden;
 }
 
+body.modal-aberto {
+    overflow: hidden;
+}
+
+
 /*------------------------{Conteúdo Novo}-----------------------*/
 
 .BannerMatematica {
@@ -59,82 +64,258 @@ body{
     color: #ffac13;
 }
 
-/*------------------------{Atividades Cards}-----------------------*/
-.conteudo-trimestre {
-    padding: 20px 0;
+/*------------------------{Estilo dos Cards de Atividade}-----------------------*/
+
+.container-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    padding: 40px 5%;
+    max-width: 1100px; 
+    margin: 0 auto;
 }
 
-.AlinhamentoAtividadeMath {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 60%; 
-    margin: 30px auto; 
-    padding: 25px;
+.cartao-atividade {
+    background-color: #212330;
     border: 2px solid #333;
     border-radius: 15px;
-    background-color: #151722;
-    transition: border-color 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.AlinhamentoAtividadeMath:hover {
+.cartao-atividade:hover {
+    transform: translateY(-5px);
     border-color: #ffac13;
 }
 
-.Atv1Math {
-    flex: 1;
-    max-width: 65%;
-    padding-right: 20px;
-}
-
-.Atv1Math h1 {
-    font-size: 36px;
-    color: white;
-    padding-bottom: 15px;
-}
-
-.Atv1Math h3 {
-    font-size: 1rem;
-    color: #ccc;
-    font-style: normal;
-}
-
-.ImgBotaoAtv1 {
-    flex: 1;
-    max-width: 35%;
-    text-align: center;
-}
-
-.imgAtv1Math img {
+.cartao-imagem {
+    position: relative;
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    padding-top: 56.25%; 
+    background-color: #333;
+}
+
+.cartao-imagem img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.cartao-imagem .sobreposicao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cartao-imagem:hover .sobreposicao {
+    opacity: 1;
+}
+
+.cartao-imagem:hover img {
+    opacity: 0.15; 
+}
+
+.link-info {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.icone-favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icone-favorito:hover {
+    transform: scale(1.15);
+}
+
+.icone-favorito.favoritado {
+    color: #ff69b4; 
+}
+
+.cartao-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cartao-titulo {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cartao-descricao {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.ler-mais {
+    color: #ffac13;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.ler-mais:hover {
+    color: #e89c10;
+}
+
+.tags-habilidades {
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag-habilidade {
+    background-color: #4A4E69;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    transition: background-color 0.4s, color 0.4s;
+    text-align: center; 
+}
+
+.tag-habilidade:hover {
+    background-color: #e89c10;
+    color: black;
+}
+
+.cartao-atividade.favoritado, .cartao-atividade:hover {
+    border-color: #ffac13;
+}
+
+.container-resumo-habilidade {
+    background-color: #12141d;
+    border-radius: 0 8px 8px 0;
+    padding: 15px;
+    min-height: 70px; 
+    border-left: 5px solid #ffac13;
+    margin-top: auto; 
+    position: relative;
+}
+
+.resumo-habilidade {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/*------------------------{Estilos do Modal}-----------------------*/
+
+.modal-sobreposicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 20, 29, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.modal-sobreposicao.visivel {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.modal-conteudo {
+    background-color: #212330;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ffac13;
+    width: 90%;
+    max-width: 650px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-sobreposicao.visivel .modal-conteudo {
+    transform: scale(1);
+}
+
+.modal-categoria {
+    font-size: 16px;
+    color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modalTitulo {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#paragrafoModalDescricao {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.botao-fechar-modal {
+    background-color: #6A4FE8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
     display: block;
     margin: 0 auto;
-    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.botaoAtividade1 {
-    display: block;
-    margin-top: 20px;
+.botao-fechar-modal:hover {
+    background-color: #583fcf;
+    transform: scale(1.05);
 }
 
-.botaoAtividade1 button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #ffac13;
-    border: none;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    border-radius: 5px;
-    width: 60%;
-    transition: background-color 0.3s;
-}
-
-.botaoAtividade1 button:hover {
-    background-color: #e89c10;
-}
 
 /*--------------------------{footer}-------------------------*/
 

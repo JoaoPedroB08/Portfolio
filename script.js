@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("Error.");
     }
 
+}); 
+
 //------------------------{Ir Para os Lugar certinho}-----------------------
 const scrollButtons = document.querySelectorAll('button[data-scroll-to]'); 
 
@@ -85,24 +87,7 @@ const scrollButtons = document.querySelectorAll('button[data-scroll-to]');
         });
     }
 
-}); 
-
-const emailButton = document.getElementById("emailBotao");
-const emailText = document.getElementById("emailTexto");
-
-if (emailButton && emailText) {
-    emailText.style.display = ''; 
-
-    emailButton.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        emailText.classList.toggle("visible");
-    });
-} else {
-    console.warn("error.");
-}
-
-//----------------------{Jogo do Dino The Games Awards}-------------------------
+    //----------------------{Jogo do Dino The Games Awards}-------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
     const modalElement = document.getElementById('ModalGame'); 
@@ -169,19 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
 
-// -----------------------{Locomoção entre trimestres e erro no email aparecendo}--------------------------
 
+// -----------------------{Locomoção entre trimestres}--------------------------
 document.addEventListener('DOMContentLoaded', function() {
-
-    const emailBotao = document.getElementById("emailBotao");
-    if(emailBotao) {
-        emailBotao.addEventListener("click", function(event) {
-            event.preventDefault();
-            const emailTexto = document.getElementById("emailTexto");
-            emailTexto.style.display = emailTexto.style.display === "none" ? "block" : "none";
-        });
-    }
-
     const trimestreBtns = document.querySelectorAll('.trimestre-btn');
     const conteudos = document.querySelectorAll('.conteudo-trimestre');
 
@@ -189,13 +164,10 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function() {
             trimestreBtns.forEach(b => b.classList.remove('ativo'));
             this.classList.add('ativo');
-
             const targetId = this.getAttribute('data-target');
-            
             conteudos.forEach(conteudo => {
                 conteudo.style.display = 'none';
             });
-            
             const targetConteudo = document.getElementById(targetId);
             if(targetConteudo) {
                 targetConteudo.style.display = 'block';
@@ -205,21 +177,136 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //-----------------{ LÓGICA DO SUBMENU DE TI }-----------------------------
-const tiBotao = document.getElementById('TiBotao');
-
+document.addEventListener('DOMContentLoaded', function() {
+    const tiBotao = document.getElementById('TiBotao');
     if (tiBotao) {
         const submenu = tiBotao.querySelector('.submenu-ti');
         const seta = tiBotao.querySelector('.seta-submenu');
 
         tiBotao.addEventListener('click', function(event) {
             event.stopPropagation();
-
             submenu.classList.toggle('visivel');
-
-            if (submenu.classList.contains('visivel')) {
-                seta.innerHTML = 'ʌ';
-            } else {
-                seta.innerHTML = 'v';
-            }
+            seta.innerHTML = submenu.classList.contains('visivel') ? 'ʌ' : 'v';
         });
     };
+});
+
+//-----------------{ LÓGICA DOS CARDS DE ATIVIDADE }-----------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const todosOsTrimestres = document.querySelectorAll('.conteudo-trimestre');
+
+    todosOsTrimestres.forEach(trimestre => {
+        const containerDosCartoes = trimestre.querySelector('.container-cartoes');
+        if (!containerDosCartoes) return;
+
+        containerDosCartoes.querySelectorAll('.cartao-atividade').forEach(cartao => {
+            const iconeFavorito = cartao.querySelector('.icone-favorito');
+            const tagsDeHabilidades = cartao.querySelectorAll('.tag-habilidade');
+            const elementoResumo = cartao.querySelector('.resumo-habilidade');
+            const textoResumoPadrao = elementoResumo.textContent;
+
+            iconeFavorito.addEventListener('click', (e) => {
+                e.stopPropagation(); 
+                const estaFavoritado = cartao.classList.toggle('favoritado');
+                
+                iconeFavorito.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    iconeFavorito.style.transform = 'scale(1.15)';
+                     setTimeout(() => {
+                        iconeFavorito.style.transform = 'scale(1)';
+                    }, 100);
+                }, 100);
+
+                if (estaFavoritado) {
+                    iconeFavorito.textContent = 'favorite'; 
+                    iconeFavorito.classList.add('favoritado');
+                    containerDosCartoes.prepend(cartao); 
+                } else {
+                    iconeFavorito.textContent = 'favorite_border'; 
+                    iconeFavorito.classList.remove('favoritado');
+                    
+                    const cartoesNaoFavoritados = Array.from(containerDosCartoes.querySelectorAll('.cartao-atividade:not(.favoritado)'));
+                    cartoesNaoFavoritados.sort((a, b) => a.dataset.originalOrder - b.dataset.originalOrder);
+                    cartoesNaoFavoritados.forEach(cf => containerDosCartoes.appendChild(cf));
+                }
+            });
+
+            tagsDeHabilidades.forEach(tag => {
+                tag.addEventListener('mouseover', () => {
+                    elementoResumo.textContent = tag.dataset.summary;
+                });
+            });
+
+            const containerTags = cartao.querySelector('.tags-habilidades');
+            if (containerTags) {
+                containerTags.addEventListener('mouseout', () => {
+                    elementoResumo.textContent = textoResumoPadrao;
+                });
+            }
+        });
+    });
+});
+
+//-----------------{ LÓGICA DO MODAL DE DESCRIÇÃO }-----------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const sobreposicaoModal = document.getElementById('modalDescricao');
+    const tituloModal = document.getElementById('modalTitulo');
+    const descricaoModal = document.getElementById('paragrafoModalDescricao');
+    const btnFecharModal = document.getElementById('btnFecharModal');
+    const linksLerMais = document.querySelectorAll('.ler-mais');
+
+    function abrirModal(cartao) {
+        const titulo = cartao.querySelector('.cartao-titulo').textContent;
+        const descricaoCompleta = cartao.dataset.fullDescription;
+
+        tituloModal.textContent = titulo;
+        descricaoModal.textContent = descricaoCompleta;
+        
+        document.body.classList.add('modal-aberto');
+        sobreposicaoModal.classList.add('visivel');
+    }
+
+    function fecharModal() {
+        document.body.classList.remove('modal-aberto');
+        sobreposicaoModal.classList.remove('visivel');
+    }
+
+    linksLerMais.forEach(link => {
+        link.addEventListener('click', function(evento) {
+            const cartao = evento.target.closest('.cartao-atividade');
+            if (cartao) {
+                abrirModal(cartao);
+            }
+        });
+    });
+
+    btnFecharModal.addEventListener('click', fecharModal);
+
+    sobreposicaoModal.addEventListener('click', function(evento) {
+        if (evento.target === sobreposicaoModal) {
+            fecharModal();
+        }
+    });
+
+    window.addEventListener('keydown', function(evento) {
+        if (evento.key === 'Escape' && sobreposicaoModal.classList.contains('visivel')) {
+            fecharModal();
+        }
+    });
+});
+
+//-----------------{ LÓGICA PARA MOSTRAR E-MAIL NO FOOTER }-----------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const emailBotao = document.getElementById("emailBotao");
+    const emailTexto = document.getElementById("emailTexto");
+
+    if (emailBotao && emailTexto) {
+        emailTexto.style.display = ''; 
+
+        emailBotao.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            
+            emailTexto.classList.toggle("visible");
+        });
+    }
+});
