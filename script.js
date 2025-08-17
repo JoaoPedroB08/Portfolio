@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    //-----------------{ INICIALIZAÇÃO GERAL E ANIMAÇÃO DE SCROLL (CORRIGIDO) }-----------------------------
+    //-----------------{ INICIALIZAÇÃO GERAL E ANIMAÇÃO DE SCROLL }-----------------------------
     document.documentElement.classList.add('js-loading');
     window.addEventListener('load', () => {
         document.documentElement.classList.remove('js-loading');
@@ -10,11 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (sectionsToAnimate.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // SE O ELEMENTO ESTÁ NA TELA, ADICIONA A CLASSE 'visible'
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
                 } 
-                // SE O ELEMENTO SAIU DA TELA, REMOVE A CLASSE 'visible' PARA PERMITIR A REANIMAÇÃO
                 else {
                     entry.target.classList.remove("visible");
                 }
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll(".btnTelaPrincipal").forEach(button => {
         button.addEventListener("click", () => {
-            // Se o botão "Início" ou "Voltar" for clicado, sempre vai para a index.html
              window.location.href = 'index.html';
         });
     });
@@ -118,10 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    // =================================================================================
-    // =========== CÓDIGO RESTAURADO PARA PÁGINAS DE MATÉRIAS ==========================
-    // =================================================================================
 
     // -----------------------{ TROCA DE TRIMESTRES }--------------------------
     const trimestreBtns = document.querySelectorAll('.trimestre-btn');
@@ -229,4 +222,5 @@ document.addEventListener('DOMContentLoaded', function () {
         sobreposicaoModal.addEventListener('click', (e) => { if (e.target === sobreposicaoModal) fecharModal(); });
         window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sobreposicaoModal.classList.contains('visivel')) fecharModal(); });
     }
+
 });
