@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #12141d;
+    background: linear-gradient(to right, #121520, rgb(30, 33, 43), #121520);
     overflow-x: hidden;
 }
 
@@ -695,7 +695,7 @@ footer {
     align-items: center;
     text-align: center;
     color: white;
-    background-color: rgb(6, 6, 12);
+    background: linear-gradient(#090b0f, #07060a);
     height: 240px;
     margin-top: 80px;
 }
@@ -763,5 +763,4 @@ footer {
   
 #emailTexto[style*="display: none"] {
     display: block !important;
-
 }
